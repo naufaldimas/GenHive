@@ -13,8 +13,10 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        @vite(['resources/css/styles.css', 'resources/js/scripts.js', 'resources/js/upload.js'])
+
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        <script src="{{ asset('js/scripts.js') }}" defer></script>
+        <script src="{{ asset('js/upload.js') }}" defer></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -139,19 +141,18 @@
         </footer> -->
 
 
-            <div class="footer">
-                <div class="footer-left">
-                    copyrights©2024 Reserved by GenHive
-                </div>
-                <div class="footer-right">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fas fa-envelope"></i></a>
-                </div>
+        <div class="footer">
+            <div class="footer-left">
+                copyrights©2024 Reserved by GenHive
             </div>
+            <div class="footer-right">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
 
-    
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
