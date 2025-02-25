@@ -81,6 +81,24 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+@font-face {
+    font-family: 'ErasBoldITC';
+    src:url('/font/ITC Eras Std Bold.otf');
+}
+
+@font-face {
+    font-family: 'ErasDemiITC';
+    src:url('/font/ITC Eras Demi Regular.otf');
+}
+
+.ErasBoldITC{
+    font-family: 'ErasBoldITC';
+}
+
+.ErasDemiITC{
+    font-family: 'ErasDemiITC';
+}
+
 *,
 *::before,
 *::after {
@@ -130,10 +148,10 @@ body {
   height: 968px; /* Mengisi seluruh tinggi layar */
   background-color: #f7d46c; /* Warna latar belakang */
   padding: 20px;
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
   border-radius: 126px 0 126px 0;
 }
-.title img {  
+.title img {
   width: 65 vw; /* Ukuran gambar judul */
   object-fit: contain;
   display: block;
@@ -148,7 +166,7 @@ body {
   width: 90%;
   height: 526px;
   /* padding: 100px; */
-  
+
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -183,7 +201,7 @@ body {
   background-color: #ffc300; /* Warna saat hover */
 }
 
-  
+
 /* Area upload */
 .upload-area {
   display: flex;
@@ -205,7 +223,7 @@ body {
   margin-top: 50px;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  width: 100%;  
+  width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
@@ -271,7 +289,7 @@ body {
   width: 100%;
   align-items: center;
   padding-left: 8vw;
-  padding-right: 8vw; 
+  padding-right: 8vw;
   padding-bottom: 5vw;
   text-align: center;
   font-size: 1.5vw;
@@ -874,7 +892,7 @@ progress {
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
-  
+
 }
 
 .col {
@@ -11234,7 +11252,7 @@ html {
     line-height: 2.5rem;
   }
 }
-/* 
+/*
 .footer {
   padding-top: 1vh;
   padding-bottom: 1vh;
@@ -11272,7 +11290,7 @@ html {
   color: black;
   text-decoration: none;
   font-size: 30px; /* Ukuran ikon */
-  
+
 }
 
 .footer-right a:hover {

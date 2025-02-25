@@ -1,27 +1,26 @@
-@font-face {
-    font-family: 'ErasBoldITC';
-    src:url('/font/ITC Eras Std Bold.otf');
+.loading{
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-html, body {
+.loading .container{
     margin: 0;
     padding: 0;
-    overflow: hidden;
-}
-
-body {
-    background-color: #FFF1C1;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-.container {
+.container_loading {
     margin: 0;
     padding: 0;
     width: 500px;
-    height: 275px;
+    height: 300px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -38,7 +37,7 @@ body {
     align-items: center;
 }
 
-.container .shuffle_card img {
+.shuffle_card img {
     width: 120px;
     position: absolute;
     transition: transform 0.5s, border 0.5s;
@@ -74,35 +73,38 @@ body {
 }
 
 .loading-text {
-    font-family: 'ErasBoldITC';
     color: #F4BC43;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    gap: 1px;
     font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Jarak antara teks dan titik */
 }
 
-.loading-text .text{
-    width: 73%;
-    text-align: right;
+.text {
+    flex-shrink: 0; /* Mencegah teks utama bergerak */
 }
 
-.loading-text .dots{
-    flex: 1;
+.dots {
+    display: inline-block;
+    width: 1em; /* Reservasi ruang untuk maksimal 3 titik */
+    text-align: left; /* Menjaga titik-titik di sebelah kiri */
 }
 
-@keyframes dots {
-    0% { content: ""; }
-    25% { content: "."; }
-    50% { content: ".."; }
-    75% { content: "..."; }
-    100% { content: ""; }
+#loading .container-but .buton {
+    position: relative;
+    top: 6vw;
 }
 
-.loading-text .dots::after {
-    content: "";
-    animation: dots 1.5s infinite steps(1);
+
+@media screen and (max-width: 576px){
+
 }
 
+@media screen and (max-width: 576px){
+
+}
+
+@media screen and (max-width: 576px){
+
+}

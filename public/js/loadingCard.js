@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (index === 2) card.classList.add('card3-open');
             if (index === 3) card.classList.add('card4-open');
         });
-        setTimeout(moveCards, 700);
+        setTimeout(moveCards, 550);
     }
 
     function moveCards() {
@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 resetCards();
                 moveCount++;
                 openCards();
-            }, 700);
+            }, 550);
         } else {
-            setTimeout(closeCards, 100);
+            setTimeout(closeCards, 50);
         }
     }
 
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         moveCount = 0;
         setTimeout(() => {
             openCards();
-        }, 700);
+        }, 550);
     }
 
     openCards();
