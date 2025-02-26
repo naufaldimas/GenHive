@@ -1,0 +1,110 @@
+.loading{
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading .container{
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_loading {
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shuffle_card{
+    width: 100%;
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shuffle_card img {
+    width: 120px;
+    position: absolute;
+    transition: transform 0.5s, border 0.5s;
+}
+
+#card1 { z-index: 4; }
+#card2 { z-index: 3; }
+#card3 { z-index: 2; }
+#card4 { z-index: 1; }
+
+.card1-open {
+    transform: translateX(36.5px) translateY(12px) rotate(15deg);
+}
+
+.card2-open {
+    transform: translateX(12px) translateY(-6px) rotate(0);
+}
+
+.card3-open {
+    transform: translateX(-19px) translateY(-13px) rotate(-15deg);
+}
+
+.card4-open {
+    transform: translateX(-41px) translateY(5px) rotate(-30deg);
+}
+
+.card1-move {
+    transform: translateX(36.5px) translateY(-49px) rotate(0);
+}
+
+.card-reset {
+    transform: translateX(0) translateY(0) rotate(0);
+}
+
+.loading-text {
+    color: #F4BC43;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Jarak antara teks dan titik */
+}
+
+.text {
+    flex-shrink: 0; /* Mencegah teks utama bergerak */
+}
+
+.dots {
+    display: inline-block;
+    width: 1em; /* Reservasi ruang untuk maksimal 3 titik */
+    text-align: left; /* Menjaga titik-titik di sebelah kiri */
+}
+
+#loading .container-but .buton {
+    position: relative;
+    top: 6vw;
+}
+
+
+@media screen and (max-width: 576px){
+
+}
+
+@media screen and (max-width: 576px){
+
+}
+
+@media screen and (max-width: 576px){
+
+}
