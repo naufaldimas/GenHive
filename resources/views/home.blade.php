@@ -26,9 +26,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Home</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Feature</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">About Us</a></li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/') }}#portfolio">Home</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/') }}#about">Feature</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/') }}#contact">About Us</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -55,17 +61,16 @@
                         <div>Choose a file or drag it here</div>
                         <div>Supported formats: .mp3, .wav </div>
                         <div class="upload-audio-btn-container">
-                        <input type="file" id="file-input" accept=".mp3, .wav" hidden>
-                        <p id="error-message" style="color: red; font-weight: bold;"></p>
-                            <button class="upload-btn">Upload Audio</button>
+                            <form action="{{ route('result') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <button type="submit" class="buton">Find The Genre</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="container-but">
-                    <button class="buton">Find The Genre</button>
-                </div>
             </div>
         </section>
+
 
         <section class="page-section" id="contact">
             <div class="container-aboutUs">
@@ -94,7 +99,7 @@
                 </div>
             </div>
         </section>
-
+        
         <div class="footer">
             <div class="footer-left">
                 copyrights©2024 Reserved by GenHive
