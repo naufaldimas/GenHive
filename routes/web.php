@@ -7,8 +7,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/test', function () {
-    return "test";
-});
-
 Route::post('/result', [SongController::class, 'predict'])->name('result');
+
+Route::get('/loading', function () {
+    return view('loading');
+});

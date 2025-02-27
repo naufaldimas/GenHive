@@ -59,7 +59,7 @@
                     <div id="drop-area" class="upload-area">
                         <img src="/images/img/UploadIcon.png" class="upload-icon">
                         <div>Choose a file or drag it here</div>
-                        <div>Supported formats: .mp3, .wav </div> 
+                        <div>Supported formats: .mp3, .wav </div>
                         <div class="upload-audio-btn-container">
                             <form action="{{ route('result') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
