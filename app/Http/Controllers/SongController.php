@@ -3,16 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class SongController extends Controller
 {
     public function predict(Request $request)
     {
-        // Dummy data for testing
-        $song_name = "Bohemian Rhapsody";
-        $predicted_genre = "Rock";
+        // Get the file from the request
+        $file = $request->file('file');
 
-        // Tambahkan videoId untuk link YouTube
+        // Forward the file from request to POST localhost:5555/predict
+        $response = Http::attach(
+            'file', // This is the field name expected by the API
+            file_get_contents($file->getRealPath()),
+            $file->getClientOriginalName()
+        )->post('http://localhost:5555/predict');
+
+        // Check for successful response
+        if (!$response->successful()) {
+            return back()->withErrors(['error' => 'Failed to get prediction.']);
+        }
+
+        // Get the JSON data from the response
+        $data = $response->json();
+        $song_name = $data['name'];
+        $predicted_genre = $data['genre'];
+
+        // TO DO: Implement recommendation logic here
         $recommendations = [
             ['title' => 'Stairway to Heaven', 'genre' => 'Rock', 'videoId' => 'QkF3oxziUI4'],
             ['title' => 'Hotel California', 'genre' => 'Rock', 'videoId' => '09839DpTctU'],
