@@ -12,20 +12,24 @@ class SongController extends Controller
         // Get the file from the request
         $file = $request->file('file');
 
-        // Forward the file from request to POST localhost:5555/predict
-        $response = Http::attach(
-            'file', // This is the field name expected by the API
-            file_get_contents($file->getRealPath()),
-            $file->getClientOriginalName()
-        )->post('http://localhost:5555/predict');
+        try {
+            // Forward the file from request to POST localhost:5555/predict
+            $response = Http::attach(
+                'file', // This is the field name expected by the API
+                file_get_contents($file->getRealPath()),
+                $file->getClientOriginalName()
+            )->post('http://localhost:5555/predict');
 
-        // Check for successful response
-        if (!$response->successful()) {
-            return back()->withErrors(['error' => 'Failed to get prediction.']);
+            $data = $response->json();
+        } catch (\Exception $e) {
+            // Expected error when prediction API is not available
+            $data = [
+                'name' => $file->getClientOriginalName(),
+                'genre' => 'Unknown (Prediction API was not available)'
+            ];
         }
 
         // Get the JSON data from the response
-        $data = $response->json();
         $song_name = $data['name'];
         $predicted_genre = $data['genre'];
 
