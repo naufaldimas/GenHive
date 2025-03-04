@@ -1,0 +1,194 @@
+.result-container {
+    background-color: #fff2bf; /* Warna background kotak */
+    max-width: 90%; 
+    align-items: center;
+    height: 65vh;
+    margin: 125px 50px 0px 70px;
+    box-shadow: 4px 4px 80px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 70px 70px; /* Pastikan header tidak menutupi */
+    border-radius: 126px 0 100px 0;
+}
+
+body {
+    background-color: #F7D46C;
+}
+
+.genre-detail {
+    font-size: 26px;
+}
+
+.recommendations {
+    width: 25%;
+    background-color: #F2C94C;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 50px 0;
+}
+
+.recommend-title {
+    font-size: 20px;
+    font-family: "Cambria", serif;
+    margin-bottom: 15px;
+}
+
+.recommend-box {
+    border-bottom-right-radius: 50px;
+    flex-grow: 1;
+    overflow-y: auto; 
+    max-height: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.recommend-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.recommend-box::-webkit-scrollbar-track {
+    background: #F2C94C;
+    border-radius: 10px;
+}
+
+.recommend-box::-webkit-scrollbar-thumb {
+    background: #D4A017;
+    border-radius: 10px;
+}
+
+.recommend-item {
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.song-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.song-info {
+    line-height: 0.5;
+}
+
+.song-title {
+    font-family: 'Eras Demi ITC', sans-serif;
+    margin-top: 1vw;
+    font-size: 1vw;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.song-genre {
+    font-size: 1vw;
+    color: #555;
+    margin-bottom: 1vw;
+}
+
+.play-button {
+    padding-bottom: 1000px;
+    background: #F2C94C;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.audio-player {
+    position: flex;
+    margin-top: 3vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    margin-right: 10px;
+}
+
+.play-button {
+    width: 125px;
+    height: 50px; 
+    background: #e5a70a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: 'Eras Demi ITC', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.play-button:hover {
+    background: #e6b800;
+}
+
+#progress-bar {
+    flex-grow: 1;
+    margin: 0 15px;
+    height: 5px;
+    background: #F2C94C;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #D4A017;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#time-display {
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+}
+
+#progress-bar {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#time-display {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Tombol Another Song */
+.button-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.another-song {
+    background-color: #e5a70a;
+    color: white;
+    padding: 10px 100px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 1vw;
+    margin-right: 7%;
+    font-family: 'Eras Demi ITC', sans-serif;
+    font-weight: bold;
+}
