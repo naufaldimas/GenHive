@@ -51,24 +51,31 @@
         </section>
 
         <section class="page-section upload-section bg-primary text-white mb-0" id="about">
-            <div class="main-container">
-                <div class="title">
-                    <img src="/images/img/Whatsthe Genre.png">
-                </div>
-                <div class="box">
-                    <div id="drop-area" class="upload-area">
-                        <img src="/images/img/UploadIcon.png" class="upload-icon">
-                        <div>Choose a file or drag it here</div>
-                        <div>Supported formats: .mp3, .wav </div>
-                        <div class="upload-audio-btn-container">
-                            <form action="{{ route('result') }}" method="POST" enctype="multipart/form-data">
-                                @csrf
-                                <button type="submit" class="buton">Find The Genre</button>
-                            </form>
+            <form action="{{ route('result') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+                <div class="main-container">
+                    <div class="title">
+                        <img src="/images/img/Whatsthe Genre.png">
+                    </div>
+
+                    <div class="box">
+                        <div id="drop-area" class="upload-area">
+                            <img src="/images/img/UploadIcon.png" class="upload-icon">
+                            <div>Choose a file or drag it here</div>
+                            <div>Supported formats: .mp3, .wav </div>
+                            <div class="upload-audio-btn-container">
+                                <input type="file" id="file-input" accept=".mp3, .wav" hidden>
+                                <p id="error-message" style="color: red; font-weight: bold;"></p>
+                                <div class="upload-btn">Upload Audio</div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="container-but">
+                        <button class="buton">Find The Genre</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </section>
 
 
@@ -99,7 +106,7 @@
                 </div>
             </div>
         </section>
-        
+
         <div class="footer">
             <div class="footer-left">
                 copyrights©2024 Reserved by GenHive
