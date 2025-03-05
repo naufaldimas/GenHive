@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const fileInput = document.getElementById("file-input");
     const errorMessage = document.getElementById("error-message");
 
+    document.getElementsByClassName("another-song").addEventListener("click", function() {
+        window.history.back();
+    })
+
     function validateFile(file) {
         const validExtensions = ["audio/mpeg", "audio/wav"]; // MP3 & WAV
         return validExtensions.includes(file.type);
