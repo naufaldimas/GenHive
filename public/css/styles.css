@@ -146,6 +146,7 @@ body {
 
 .main-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -155,8 +156,9 @@ body {
   padding-bottom: 20px;
   border-radius: 126px 0 126px 0;
 }
-.title img {
-  width: 65 vw; /* Ukuran gambar judul */
+
+.title img {  
+  width: 65vw; /* Ukuran gambar judul */
   object-fit: contain;
   display: block;
   margin-top: 10px;
@@ -261,7 +263,7 @@ body {
 }
 
 .titleGenYel img{
-  width: 385px;
+  width: 28vw;
   margin-bottom: 2vh;
 }
 
@@ -802,7 +804,7 @@ progress {
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "—";
 }
 
 .img-fluid {
@@ -855,17 +857,47 @@ progress {
   width: 250px;
 }
 
-@media (min-width: 576px) {
+@media screen and (max-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
   }
 }
-@media (min-width: 768px) {
+@media screen and (max-width: 768px) {
+
+  .title img{
+    width: 80vw;
+  }
+
+
+  .container-text{
+    font-size: 18px;
+  }
+
+  .upload-btn{
+    width: 15vw;
+    height: 5vw;
+  }
+
+  .titleGenYel img{
+    width: 50vw;
+    margin-bottom: 2vh;
+  }
+
+  .titleDeveloper img{
+    width: 45vw;
+    margin-bottom: 2vh;
+  }
+
+  .titleEmail img{
+    width: 25vw;
+    margin-bottom: 2vh;
+  }
   .container-md, .container-sm, .container {
     max-width: 720px;
   }
 }
-@media (min-width: 992px) {
+@media screen and (max-width: 992px) {
+
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
@@ -8513,7 +8545,8 @@ textarea.form-control-lg {
   visibility: hidden !important;
 }
 
-@media (min-width: 576px) {
+@media screen and (max-width: 576px) {
+
   .float-sm-start {
     float: left !important;
   }
@@ -11277,7 +11310,6 @@ html {
   align-items: center;
   padding: 10px 20px;
   font-size: 20px;
-  height: 5vw;
 }
 
 .footer-left {
