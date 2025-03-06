@@ -896,6 +896,22 @@ progress {
     max-width: 720px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .upload-icon{
+    width: 15%;
+  }
+
+  .buton{
+    width: 50vw;
+  }
+
+  .upload-btn {
+    width: 30vw;
+    height: 7vw;
+}
+}
+
 @media screen and (max-width: 992px) {
 
   .container-lg, .container-md, .container-sm, .container {
