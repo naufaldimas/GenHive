@@ -61,10 +61,10 @@
                     <div class="box">
                         <div id="drop-area" class="upload-area">
                             <img src="/images/img/UploadIcon.png" class="upload-icon">
-                            <div>Choose a file or drag it here</div>
-                            <div>Supported formats: .mp3, .wav </div>
+                            <div class="desc">Choose a file or drag it here</div>
+                            <div class="desc">Supported formats: .mp3, .wav </div>
                             <div class="upload-audio-btn-container">
-                                <input type="file" id="file-input" accept=".mp3, .wav" hidden>
+                                <input type="file" id="file-input" name="audio_file" accept=".mp3, .wav" hidden>
                                 <p id="error-message" style="color: red; font-weight: bold;"></p>
                                 <div class="upload-btn">Upload Audio</div>
                             </div>
@@ -72,7 +72,7 @@
                     </div>
 
                     <div class="container-but">
-                        <button class="buton">Find The Genre</button>
+                        <button class="buton ErasDemiITC">Find The Genre</button>
                     </div>
                 </div>
             </form>

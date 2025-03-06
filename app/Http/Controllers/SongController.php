@@ -20,7 +20,7 @@ class SongController extends Controller
                     file_get_contents($file->getRealPath()),
                     $file->getClientOriginalName()
                 )->post('http://localhost:5555/predict');
-    
+
                 $data = $response->json();
             } catch (\Exception $e) {
                 // Expected error when prediction API is not available
@@ -50,7 +50,7 @@ class SongController extends Controller
             ['title' => 'Smoke on the Water', 'artist' => 'Deep Purple', 'videoId' => 'Q2FzZSBD5LE'],
             ['title' => 'Livin’ on a Prayer', 'artist' => 'Bon Jovi', 'videoId' => 'lDK9QqIzhwk']
         ];
-        
+
         $recommendations_jpop = [
             ['title' => 'Lemon', 'artist' => 'Kenshi Yonezu', 'videoId' => 'SX_ViT4Ra7k'],
             ['title' => 'Pretender', 'artist' => 'Official HIGE DANDism', 'videoId' => 'TQ8WlA2GXbk'],
@@ -66,7 +66,7 @@ class SongController extends Controller
             ['title' => 'I AM', 'artist' => 'IVE', 'videoId' => '6ZUIwj3FgUY'],
             ['title' => 'Unforgiven', 'artist' => 'LE SSERAFIM', 'videoId' => 'UBURTj20HXI']
         ];
-        
+
         $recommendations_rnb = [
             ['title' => 'Blinding Lights', 'artist' => 'The Weeknd', 'videoId' => 'fHI8X4OXluQ'],
             ['title' => 'Earned It', 'artist' => 'The Weeknd', 'videoId' => 'waU75jdUnYw'],
@@ -74,7 +74,7 @@ class SongController extends Controller
             ['title' => 'Adorn', 'artist' => 'Miguel', 'videoId' => '8dM5QYdTo08'],
             ['title' => 'Location', 'artist' => 'Khalid', 'videoId' => 'by3yRdlQvzs']
         ];
-        
+
         $recommendations_hiphop = [
             ['title' => 'Sicko Mode', 'artist' => 'Travis Scott', 'videoId' => '6ONRf7h3Mdk'],
             ['title' => 'God’s Plan', 'artist' => 'Drake', 'videoId' => 'xvZqHgFz51I'],
@@ -82,7 +82,7 @@ class SongController extends Controller
             ['title' => 'Rich Flex', 'artist' => 'Drake & 21 Savage', 'videoId' => 'z0RE1Q8jy7Y'],
             ['title' => 'Super Gremlin', 'artist' => 'Kodak Black', 'videoId' => 'kiB9qk4gnt4']
         ];
-        
+
         $recommendations_pop = [
             ['title' => 'Levitating', 'artist' => 'Dua Lipa', 'videoId' => 'TUVcZfQe-Kw'],
             ['title' => 'As It Was', 'artist' => 'Harry Styles', 'videoId' => 'H5v3kku4y6Q'],
@@ -90,7 +90,7 @@ class SongController extends Controller
             ['title' => 'Vampire', 'artist' => 'Olivia Rodrigo', 'videoId' => 'RlPNh_PBZb4'],
             ['title' => 'Shivers', 'artist' => 'Ed Sheeran', 'videoId' => 'Il0S8BoucSA']
         ];
-        
+
         $recommendations_edm = [
             ['title' => 'Ghost', 'artist' => 'Alan Walker & Au/Ra', 'videoId' => '1DCiUhNn9rc'],
             ['title' => 'Faded', 'artist' => 'Alan Walker', 'videoId' => '60ItHLz5WEA'],
@@ -98,7 +98,7 @@ class SongController extends Controller
             ['title' => 'Hero', 'artist' => 'Martin Garrix & JVKE', 'videoId' => 'J5spiMVI9U8'],
             ['title' => 'I’m Good (Blue)', 'artist' => 'David Guetta & Bebe Rexha', 'videoId' => '90RLzVUuXe4']
         ];
-        
+
         $recommendations_indie = [
             ['title' => 'Take a Walk', 'artist' => 'Passion Pit', 'videoId' => 'dZX6Q-Bj_xg'],
             ['title' => 'Electric Feel', 'artist' => 'MGMT', 'videoId' => 'MmZexg8sxyk'],
@@ -106,8 +106,8 @@ class SongController extends Controller
             ['title' => 'Do I Wanna Know?', 'artist' => 'Arctic Monkeys', 'videoId' => 'bpOSxM0rNPM'],
             ['title' => 'Riptide', 'artist' => 'Vance Joy', 'videoId' => 'uJ_1HMAGb4k']
         ];
-        
-    
+
+
         // Redirect ke tampilan result dengan data
         return view('result', compact('song_name', 'predicted_genre', 'recommendations_kpop'));
     }
