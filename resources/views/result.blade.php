@@ -75,7 +75,7 @@
                         <div class="audio-player">
                             <!-- Elemen Audio (hidden) -->
                             <audio id="audioPlayer">
-                                <source src="{{ $audio_path }}" type="audio/mpeg">
+                                <source src="{{ asset('audio/dummy.mp3') }}" type="audio/mpeg">
                                 Your browser does not support the audio element.
                             </audio>
                             <!-- Tombol Play/Pause -->
@@ -89,7 +89,7 @@
                         <div class="recommendations">
                             <h2 class="recommend-title">Recommended For You:</h2>
                             <div class="recommend-box" id="recommend-list">
-                                @foreach ($recommendations as $song)
+                                @foreach ($recommendations_kpop as $song)
                                     <div class="recommend-item" onclick="openYoutube('{{ $song['videoId'] }}')">
                                         <img src="/images/img/KPop-Song-Icon.jpg" class='song-img'>
                                         <div class="song-info">

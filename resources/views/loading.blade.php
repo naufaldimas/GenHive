@@ -37,7 +37,37 @@
             </div>
         </nav>
 
-        <section class="page-section loading" id="loading">
+        <section class="page-section loading bg-primary text-white mb-0" id="loading">
+            <div class="main-container">
+                <div class="title">
+                    <img src="/images/img/Whatsthe Genre.png">
+                </div>
+
+                <div class="box" id="pre-loading">
+                    <div id="drop-area" class="upload-area">
+                        <div class="container_loading">
+                            <div class="shuffle_card">
+                                <img id="card1" src="/images/img/Card Modern Pop.png" alt="Card_ModernPop">
+                                <img id="card2" src="/images/img/Card Trap.png" alt="Card_Trap">
+                                <img id="card3" src="/images/img/Card J-Pop.png" alt="Card_J-Pop">
+                                <img id="card4" src="/images/img/Card K-Pop.png" alt="Card_K-Pop">
+                            </div>
+
+                            <div class="loading-text ErasBoldITC">
+                                <span class="text">Find the Genre</span>
+                                <span class="dots"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-but">
+                    <button class="buton ErasDemiITC">Cancel</button>
+                </div>
+            </div>
+        </section>
+
+        {{-- <section class="page-section loading" id="loading">
             <div class="container">
                 <div class="container_loading">
                     <div class="shuffle_card">
@@ -57,7 +87,7 @@
             <div class="container-but">
                 <button class="buton ErasDemiITC">Cancel</button>
             </div>
-        </section>
+        </section> --}}
 
         <div class="footer">
             <div class="footer-left">

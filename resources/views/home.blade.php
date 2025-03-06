@@ -69,8 +69,8 @@
                             <div class="desc">Supported formats: .mp3, .wav </div>
                             <div class="upload-audio-btn-container">
                                 <input type="file" id="file-input" name="file" accept=".mp3, .wav" hidden>
-                                <p id="error-message" style="color: red; font-weight: bold;"></p>
                                 <div class="upload-btn">Upload Audio</div>
+                                <p id="message" style="font-weight: bold;"></p>
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,37 @@
             </form>
         </section>
 
-        <section class="page-section loading" id="loading" style="display: none;">
+        <section class="page-section loading bg-primary text-white mb-0" id="loading" style="display: none;">
+            <div class="main-container">
+                <div class="title">
+                    <img src="/images/img/Whatsthe Genre.png">
+                </div>
+
+                <div class="box" id="pre-loading">
+                    <div id="drop-area" class="upload-area">
+                        <div class="container_loading">
+                            <div class="shuffle_card">
+                                <img id="card1" src="/images/img/Card Modern Pop.png" alt="Card_ModernPop">
+                                <img id="card2" src="/images/img/Card Trap.png" alt="Card_Trap">
+                                <img id="card3" src="/images/img/Card J-Pop.png" alt="Card_J-Pop">
+                                <img id="card4" src="/images/img/Card K-Pop.png" alt="Card_K-Pop">
+                            </div>
+
+                            <div class="loading-text ErasBoldITC">
+                                <span class="text">Find the Genre</span>
+                                <span class="dots"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-but">
+                    <button class="buton ErasDemiITC" onclick="cancelLoading()">Cancel</button>
+                </div>
+            </div>
+        </section>
+
+        {{-- <section class="page-section loading" id="loading" style="display: none;">
             <div class="container">
                 <div class="container_loading">
                     <div class="shuffle_card">
@@ -102,7 +132,7 @@
             <div class="container-but">
                 <button class="buton ErasDemiITC" onclick="cancelLoading()">Cancel</button>
             </div>
-        </section>
+        </section> --}}
 
         <section class="page-section" id="contact">
             <div class="container-aboutUs">
@@ -110,7 +140,9 @@
                     <img src="/images/img/GenhiveYel.png">
                 </div>
                 <div class="container-text">
-                    <div> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus Page Maker including versions of Lorem Ipsum.</div>
+                    <div>
+                        GenHive adalah platform inovatif yang dirancang untuk membantu pengguna mengidentifikasi genre musik dengan cepat dan akurat. Dengan teknologi kecerdasan buatan, GenHive mampu menganalisis lagu dan mengklasifikasikannya ke dalam berbagai genre populer, termasuk KPop, JPop, Rock, R&B, Rap/Hip-Hop, Pop, EDM, serta Alternative/Indie.
+                    </div>
                 </div>
                 <div class="titleDeveloper">
                     <img src="/images/img/Developer.png">
