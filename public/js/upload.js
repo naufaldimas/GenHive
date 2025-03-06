@@ -2,6 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropArea = document.getElementById("drop-area");
     const fileInput = document.getElementById("file-input");
     const errorMessage = document.getElementById("error-message");
+    const anotherSongBtn = document.querySelector(".another-song");
+
+    if (anotherSongBtn) {
+        anotherSongBtn.addEventListener("click", function() {
+            window.history.back();
+        });
+    }
 
     function validateFile(file) {
         const validExtensions = ["audio/mpeg", "audio/wav"]; // MP3 & WAV
