@@ -7,6 +7,19 @@ use Illuminate\Support\Facades\Http;
 
 class SongController extends Controller
 {
+    public function process(Request $request)
+    {
+        if ($request->hasFile('file')) {
+            $audioFile = $request->file('file');
+            $fileName = time() . '_' . $audioFile->getClientOriginalName();
+            $filePath = $audioFile->storeAs('audio', $fileName, 'public');
+
+            return view('result', ['audioPath' => asset('storage/' . $filePath)]);
+        }
+
+        return redirect()->back()->with('error', 'No file uploaded.');
+    }
+
     public function predict(Request $request)
     {
         // Get the file from the request
@@ -22,6 +35,10 @@ class SongController extends Controller
                 )->post('http://localhost:5555/predict');
 
                 $data = $response->json();
+
+                $audioIdentifier = time() . '_' . $data['name'];
+                $filePath = $file->storeAs('audio', $audioIdentifier, 'public');
+                $audio_path = asset('storage/' . $filePath);
             } catch (\Exception $e) {
                 // Expected error when prediction API is not available
                 $data = [
@@ -36,13 +53,14 @@ class SongController extends Controller
                 'name' => 'No file uploaded',
                 'genre' => 'Unknown'
             ];
+
+            $audio_path = null;
         }
 
         // Get the JSON data from the response
         $song_name = $data['name'];
         $predicted_genre = $data['genre'];
 
-        // TO DO: Implement recommendation logic here
         $recommendations_rock = [
             ['title' => 'Stairway to Heaven', 'artist' => 'Led Zeppelin', 'videoId' => 'QkF3oxziUI4'],
             ['title' => 'Hotel California', 'artist' => 'Eagles', 'videoId' => '09839DpTctU'],
@@ -107,8 +125,18 @@ class SongController extends Controller
             ['title' => 'Riptide', 'artist' => 'Vance Joy', 'videoId' => 'uJ_1HMAGb4k']
         ];
 
-
+        $recommendations = [];
+        
+        if ($predicted_genre == 'Alternative/Indie') $recommendations = $recommendations_indie;
+        else if ($predicted_genre == 'EDM') $recommendations = $recommendations_edm;
+        else if ($predicted_genre == 'J-Pop') $recommendations = $recommendations_jpop;
+        else if ($predicted_genre == 'K-Pop') $recommendations = $recommendations_kpop;
+        else if ($predicted_genre == 'Pop') $recommendations = $recommendations_pop;
+        else if ($predicted_genre == 'RNB') $recommendations = $recommendations_rnb;
+        else if ($predicted_genre == 'Rock') $recommendations = $recommendations_rock;
+        else if ($predicted_genre == 'Trap/Hip-Hop') $recommendations = $recommendations_hiphop;
+        
         // Redirect ke tampilan result dengan data
-        return view('result', compact('song_name', 'predicted_genre', 'recommendations_kpop'));
+        return view('result', compact('song_name', 'predicted_genre', 'recommendations', 'audio_path'));
     }
 }
