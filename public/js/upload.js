@@ -52,3 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function showLoading(event) {
+    document.getElementById("about").style.display = "none";
+    document.getElementById("loading").style.display = "flex";
+}
+
+function cancelLoading() {
+    document.getElementById("about").style.display = "block";
+    document.getElementById("loading").style.display = "none";
+
+    // refresh window
+    location.reload();
+}

@@ -15,6 +15,10 @@
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         <script src="{{ asset('js/scripts.js') }}" defer></script>
         <script src="{{ asset('js/upload.js') }}" defer></script>
+
+        <link rel="stylesheet" href="{{ asset('css/loading.css') }}">
+        <script src="{{ asset('js/loadingCard.js') }}" defer></script>
+        <script src="{{ asset('js/loadingDots.js') }}" defer></script>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -52,19 +56,19 @@
 
         <section class="page-section upload-section bg-primary text-white mb-0" id="about">
             <form action="{{ route('result') }}" method="POST" enctype="multipart/form-data">
-            @csrf
+                @csrf
                 <div class="main-container">
                     <div class="title">
                         <img src="/images/img/Whatsthe Genre.png">
                     </div>
 
-                    <div class="box">
+                    <div class="box" id="pre-loading">
                         <div id="drop-area" class="upload-area">
                             <img src="/images/img/UploadIcon.png" class="upload-icon">
                             <div class="desc">Choose a file or drag it here</div>
                             <div class="desc">Supported formats: .mp3, .wav </div>
                             <div class="upload-audio-btn-container">
-                                <input type="file" id="file-input" name="audio_file" accept=".mp3, .wav" hidden>
+                                <input type="file" id="file-input" name="file" accept=".mp3, .wav" hidden>
                                 <p id="error-message" style="color: red; font-weight: bold;"></p>
                                 <div class="upload-btn">Upload Audio</div>
                             </div>
@@ -72,12 +76,33 @@
                     </div>
 
                     <div class="container-but">
-                        <button class="buton ErasDemiITC">Find The Genre</button>
+                        <button class="buton ErasDemiITC" onclick="showLoading(event)">Find The Genre</button>
                     </div>
                 </div>
             </form>
         </section>
 
+        <section class="page-section loading" id="loading" style="display: none;">
+            <div class="container">
+                <div class="container_loading">
+                    <div class="shuffle_card">
+                        <img id="card1" src="/images/img/Card Modern Pop.png" alt="Card_ModernPop">
+                        <img id="card2" src="/images/img/Card Trap.png" alt="Card_Trap">
+                        <img id="card3" src="/images/img/Card J-Pop.png" alt="Card_J-Pop">
+                        <img id="card4" src="/images/img/Card K-Pop.png" alt="Card_K-Pop">
+                    </div>
+
+                    <div class="loading-text ErasBoldITC">
+                        <span class="text">Find the Genre</span>
+                        <span class="dots"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-but">
+                <button class="buton ErasDemiITC" onclick="cancelLoading()">Cancel</button>
+            </div>
+        </section>
 
         <section class="page-section" id="contact">
             <div class="container-aboutUs">
