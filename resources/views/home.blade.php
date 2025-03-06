@@ -26,9 +26,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Home</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Feature</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">About Us</a></li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/') }}#portfolio">Home</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/') }}#about">Feature</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/') }}#contact">About Us</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -45,27 +51,33 @@
         </section>
 
         <section class="page-section upload-section bg-primary text-white mb-0" id="about">
-            <div class="main-container">
-                <div class="title">
-                    <img src="/images/img/Whatsthe Genre.png">
-                </div>
-                <div class="box">
-                    <div id="drop-area" class="upload-area">
-                        <img src="/images/img/UploadIcon.png" class="upload-icon">
-                        <div>Choose a file or drag it here</div>
-                        <div>Supported formats: .mp3, .wav </div>
-                        <div class="upload-audio-btn-container">
-                        <input type="file" id="file-input" accept=".mp3, .wav" hidden>
-                        <p id="error-message" style="color: red; font-weight: bold;"></p>
-                            <button class="upload-btn">Upload Audio</button>
+            <form action="{{ route('result') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+                <div class="main-container">
+                    <div class="title">
+                        <img src="/images/img/Whatsthe Genre.png">
+                    </div>
+
+                    <div class="box">
+                        <div id="drop-area" class="upload-area">
+                            <img src="/images/img/UploadIcon.png" class="upload-icon">
+                            <div>Choose a file or drag it here</div>
+                            <div>Supported formats: .mp3, .wav </div>
+                            <div class="upload-audio-btn-container">
+                                <input type="file" id="file-input" accept=".mp3, .wav" hidden>
+                                <p id="error-message" style="color: red; font-weight: bold;"></p>
+                                <div class="upload-btn">Upload Audio</div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="container-but">
+                        <button class="buton">Find The Genre</button>
+                    </div>
                 </div>
-                <div class="container-but">
-                    <button class="buton">Find The Genre</button>
-                </div>
-            </div>
+            </form>
         </section>
+
 
         <section class="page-section" id="contact">
             <div class="container-aboutUs">
