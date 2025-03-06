@@ -77,12 +77,12 @@
             <div class="recommendations">
                 <h2 class="recommend-title">Recommended For You:</h2>
                 <div class="recommend-box" id="recommend-list">
-                    @foreach ($recommendations as $song)
+                    @foreach ($recommendations_kpop as $song)
                         <div class="recommend-item" onclick="openYoutube('{{ $song['videoId'] }}')">
                             <img src="/images/img/KPop-Song-Icon.jpg" class='song-img'>
                             <div class="song-info">
                                 <p class="song-title"><strong>{{ $song['title'] }}</strong></p>
-                                <p class="song-genre">Genre: {{ $song['genre'] }}</p>
+                                <p class="song-genre">{{ $song['artist'] }}</p>
                             </div>
                         </div>
                     @endforeach
