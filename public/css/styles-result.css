@@ -1,6 +1,6 @@
 .result-container {
     background-color: #fff2bf; /* Warna background kotak */
-    max-width: 90%; 
+    max-width: 90%;
     align-items: center;
     height: 65vh;
     margin: 125px 50px 0px 70px;
@@ -12,6 +12,21 @@
     border-radius: 126px 0 100px 0;
 }
 
+.result-page .main-container{
+    padding: 0;
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    height: 100vh;
+}
+
+.result-page .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 4vw;
+}
+
 body {
     background-color: #F7D46C;
 }
@@ -20,8 +35,42 @@ body {
     font-size: 26px;
 }
 
+.result-page .title img{
+    margin-bottom: 15px;
+}
+
+.result-detail{
+    padding: 0;
+    margin: 0;
+    color: #444341;
+}
+
+.detailing-list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Supaya semua elemen sejajar vertikal */
+    gap: 15px; /* Beri sedikit lebih banyak ruang antar elemen */
+}
+
+.title-sec{
+    padding: 0;
+    margin: 0;
+    min-width: 70px; /* Gunakan min-width agar lebih stabil dibanding 5vw */
+    text-align: left;
+}
+
+.colon {
+    min-width: 10px; /* Supaya titik dua tidak bergeser */
+    text-align: center;
+}
+
+.find-genre{
+    font-family: 'ErasBoldITC';
+    color: #F4BC43;
+}
+
 .recommendations {
-    width: 25%;
     background-color: #F2C94C;
     padding: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -41,7 +90,7 @@ body {
 .recommend-box {
     border-bottom-right-radius: 50px;
     flex-grow: 1;
-    overflow-y: auto; 
+    overflow-y: auto;
     max-height: 100%;
     box-sizing: border-box;
     cursor: pointer;
@@ -97,21 +146,9 @@ body {
     margin-bottom: 1vw;
 }
 
-.play-button {
-    padding-bottom: 1000px;
-    background: #F2C94C;
-    color: black;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
 .audio-player {
     position: flex;
-    margin-top: 3vw;
+    margin-top: 4.5vw;
     width: 100%;
     display: flex;
     align-items: center;
@@ -121,50 +158,67 @@ body {
 }
 
 .play-button {
-    width: 125px;
-    height: 50px; 
-    background: #e5a70a;
+    height: 45px;
+    width: 11vw;
+    background: #F4BC43;
     color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-family: 'Eras Demi ITC', sans-serif;
-    font-weight: bold;
+    font-family: 'Cambria_Bold' !important;
+    border: none;
+    border-radius: 100px;
+    font-size: 1.3vw;
     cursor: pointer;
+    border-radius: 100px;
+    font-family: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .play-button:hover {
-    background: #e6b800;
+    background: #FFC300;
 }
 
 #progress-bar {
+    -webkit-appearance: none;
     flex-grow: 1;
-    margin: 0 15px;
+    margin: 0 13px 0 25px;
     height: 5px;
-    background: #F2C94C;
-    border-radius: 5px;
+    border-radius: 100px;
     outline: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #F4BC43 0%, rgb(255, 226, 119) 0%);
 }
 
 #progress-bar::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 10px;
-    height: 10px;
-    background: #D4A017;
+    width: 13px; /* Lebih besar */
+    height: 13px; /* Lebih besar */
+    margin: -4px; /* Agar thumb tetap sejajar dengan track */
+    background: #F4BC43;
     border-radius: 50%;
     cursor: pointer;
 }
 
+#progress-bar::-webkit-slider-thumb:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Tambahkan efek bayangan */
+}
+
+#progress-bar::-moz-range-progress {
+    border-radius: 100px;
+    background: #F4BC43; /* Warna progress */
+}
+
 #time-display {
+    flex-shrink: 0; /* Supaya teks waktu tidak mengecil */
     font-size: 1rem;
     color: black;
     font-weight: bold;
 }
 
 #progress-bar {
-    margin-top: 10px;
     cursor: pointer;
 }
 
