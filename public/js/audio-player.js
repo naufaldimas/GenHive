@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             playButton.textContent = "⏸ Pause";
         } else {
             audio.pause();
-            playButton.textContent = "▶ Play";
+            playButton.textContent = "▶ Play Song";
         }
     });
 
@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Perbarui progress bar
         const progress = (audio.currentTime / audio.duration) * 100;
         progressBar.value = progress;
+
+        progressBar.style.background = `linear-gradient(to right, #F4BC43 ${progress}%, rgb(255, 226, 119) ${progress}%)`;
 
         // Perbarui tampilan waktu
         let minutes = Math.floor(audio.currentTime / 60);
@@ -32,12 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
     progressBar.addEventListener("input", function () {
         const seekTime = (progressBar.value / 100) * audio.duration;
         audio.currentTime = seekTime;
+
+        progressBar.style.background = `linear-gradient(to right, #F4BC43 ${progress}%,rgb(255, 226, 119) ${progress}%)`;
     });
 
     // Reset tombol ketika lagu selesai
     audio.addEventListener("ended", function () {
         playButton.textContent = "▶ Play Song";
         progressBar.value = 0;
+        progressBar.style.background = `linear-gradient(to right, #F4BC43 ${progress}%, rgb(255, 226, 119)  ${progress}%)`;
         timeDisplay.textContent = "0:00";
     });
 });

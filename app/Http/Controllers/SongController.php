@@ -20,7 +20,7 @@ class SongController extends Controller
                     file_get_contents($file->getRealPath()),
                     $file->getClientOriginalName()
                 )->post('http://localhost:5555/predict');
-    
+
                 $data = $response->json();
             } catch (\Exception $e) {
                 // Expected error when prediction API is not available
@@ -50,6 +50,9 @@ class SongController extends Controller
             ['title' => 'Smoke on the Water', 'genre' => 'Rock', 'videoId' => 'Q2FzZSBD5LE'],
             ['title' => 'Livin’ on a Prayer', 'genre' => 'Rock', 'videoId' => 'lDK9QqIzhwk']
         ];
+
+
+
 
         // Redirect ke tampilan result dengan data
         return view('result', compact('song_name', 'predicted_genre', 'recommendations'));

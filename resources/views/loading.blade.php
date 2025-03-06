@@ -39,7 +39,6 @@
 
         <section class="page-section loading" id="loading">
             <div class="container">
-
                 <div class="container_loading">
                     <div class="shuffle_card">
                         <img id="card1" src="/images/img/Card Modern Pop.png" alt="Card_ModernPop">
