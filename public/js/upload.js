@@ -22,10 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     fileInput.addEventListener("change", function () {
         const file = this.files[0];
         if (file && validateFile(file)) {
-            errorMessage.textContent = "";
-            alert("File berhasil diunggah: " + file.name);
+            displayMessage(`File berhasil diunggah: ${file.name}`, true);
         } else {
-            errorMessage.textContent = "Format tidak valid! Hanya MP3 dan WAV yang diterima.";
+            displayMessage("Format tidak valid! Hanya MP3 dan WAV yang diterima.", false);
             fileInput.value = ""; // Reset input
         }
     });
@@ -40,15 +39,25 @@ document.addEventListener("DOMContentLoaded", function () {
         dropArea.classList.remove("dragover"); // Hapus kelas
     });
 
+    function displayMessage(text, isSuccess) {
+        message.textContent = text;
+        if (isSuccess) {
+            message.classList.remove("message-error");
+            message.classList.add("message-success");
+        } else {
+            message.classList.remove("message-success");
+            message.classList.add("message-error");
+        }
+    }
+
     dropArea.addEventListener("drop", (event) => {
         event.preventDefault();
         dropArea.classList.remove("dragover"); // Hapus kelas setelah drop
         const file = event.dataTransfer.files[0];
         if (file && validateFile(file)) {
-            errorMessage.textContent = "";
-            alert("File berhasil diunggah: " + file.name);
+            displayMessage(`File berhasil diunggah: ${file.name}`, true);
         } else {
-            errorMessage.textContent = "Format tidak valid! Hanya MP3 dan WAV yang diterima.";
+            displayMessage("Format tidak valid! Hanya MP3 dan WAV yang diterima.", false);
         }
     });
 });
