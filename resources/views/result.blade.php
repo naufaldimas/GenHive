@@ -75,6 +75,7 @@
                         <div class="audio-player">
                             <!-- Elemen Audio (hidden) -->
                             <audio id="audioPlayer">
+                                {{-- if "exception_api_down", dummy --}}
                                 <source src="{{ $audio_path }}" type="audio/mpeg">
                                 Your browser does not support the audio element.
                             </audio>
@@ -104,7 +105,7 @@
                 </div>
 
                 <div class="container-but">
-                    <button class="buton ErasDemiITC">Another Song</button>
+                    <button class="buton ErasDemiITC" >Another Song</button>
                 </div>
             </div>
         </section>
