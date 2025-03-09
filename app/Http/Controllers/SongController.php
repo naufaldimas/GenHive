@@ -25,6 +25,8 @@ class SongController extends Controller
         // Get the file from the request
         $file = $request->file('file');
 
+        $audio_path = null;
+
         if ($file) {
             try {
                 // Forward the file from request to POST localhost:5555/predict
@@ -53,8 +55,6 @@ class SongController extends Controller
                 'name' => 'No file uploaded',
                 'genre' => 'Unknown'
             ];
-
-            $audio_path = null;
         }
 
         // Get the JSON data from the response
