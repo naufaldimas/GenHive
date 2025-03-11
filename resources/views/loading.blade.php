@@ -18,6 +18,7 @@
         <script src="{{ asset('js/scripts.js') }}" defer></script>
         <script src="{{ asset('js/loadingCard.js') }}" defer></script>
         <script src="{{ asset('js/loadingDots.js') }}" defer></script>
+        <script src="{{ asset('js/progress.js') }}" defer></script>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -57,6 +58,12 @@
                                 <span class="text">Find the Genre</span>
                                 <span class="dots"></span>
                             </div>
+
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progress-bar"></div>
+                            </div>
+
+                            <div class="loading-percentage" id="loading-percentage">0%</div>
                         </div>
                     </div>
                 </div>

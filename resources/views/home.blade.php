@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="{{ asset('css/loading.css') }}">
         <script src="{{ asset('js/loadingCard.js') }}" defer></script>
         <script src="{{ asset('js/loadingDots.js') }}" defer></script>
+        <script src="{{ asset('js/progress.js') }}" defer></script>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -102,6 +103,12 @@
                                 <span class="text">Find the Genre</span>
                                 <span class="dots"></span>
                             </div>
+
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progress-bar"></div>
+                            </div>
+
+                            <div class="loading-percentage" id="loading-percentage">0%</div>
                         </div>
                     </div>
                 </div>
@@ -137,7 +144,7 @@
         <section class="page-section" id="contact">
             <div class="container-aboutUs">
                 <div class="titleGenYel">
-                    <img src="/images/img/GenhiveYel.png">
+                    <img class="title-img" src="/images/img/GenhiveYel.png">
                 </div>
                 <div class="container-text">
                     <div>
@@ -145,7 +152,7 @@
                     </div>
                 </div>
                 <div class="titleDeveloper">
-                    <img src="/images/img/Developer.png">
+                    <img class="title-img" src="/images/img/Developer.png">
                 </div>
                 <div class="container-text">
                     <div>11LA - PPTI 17</div>
