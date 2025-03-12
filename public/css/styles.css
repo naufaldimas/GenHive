@@ -882,33 +882,6 @@ progress {
   width: 200px;
 }
 
-@media (min-width: 576px) {
-  .container-sm, .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container-md, .container-sm, .container {
-    max-width: 720px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-
-  .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
-  }
-}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -4008,6 +3981,7 @@ textarea.form-control-lg {
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
+  padding: 0 70px;
 }
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
@@ -11199,8 +11173,8 @@ html {
     background: #f7d46c;
   }
   #mainNav.navbar-shrink {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1.1vw;
+    padding-bottom: 1.1vw;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.5em;
