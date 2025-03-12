@@ -105,6 +105,16 @@
     src: url('/font/Cambria W02 Regular.otf');
 }
 
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('/font/Montserrat-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('/font/Inter-Regular.otf');
+}
+
 .ErasBoldITC{
     font-family: 'ErasBoldITC';
 }
@@ -114,7 +124,7 @@
 }
 
 .desc{
-    font-family: 'Cambria';
+    font-family: "Inter-Regular";
     color: #444341;
     line-height: 15px;
     font-size: 1.3rem;
@@ -134,7 +144,7 @@
 
 body {
   margin: 0;
-  font-family: 'Cambria';
+  font-family: 'Inter-Regular';
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -276,7 +286,7 @@ body {
   padding: 3px 22.5px;
   text-align: center;
   background-color: #f4bc43;
-  font-family: 'Cambria_Bold';
+  font-family: 'ErasDemiITC';
   color: #ffffff;
   border: none; /* Hapus border */
   border-radius: 25px; /* Sudut melengkung */
