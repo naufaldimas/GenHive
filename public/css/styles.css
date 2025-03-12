@@ -173,23 +173,23 @@ body {
 }
 
 .main-container {
-    width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 968px; /* Mengisi seluruh tinggi layar */
+  height: 100%; /* Mengisi seluruh tinggi layar */
   background-color: #f7d46c; /* Warna latar belakang */
   padding: 20px;
   padding-bottom: 20px;
-  border-radius: 126px 0 126px 0;
+  border-radius: 8vw 0 8vw 0;
 }
+
 .title img {
-  width: 60vw; /* Ukuran gambar judul */
+  width: 50vw; /* Ukuran gambar judul */
   object-fit: contain;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 32px;
+  display: flex;
+  padding: 2vw;
   align-items: center;
 }
 
@@ -203,13 +203,14 @@ body {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  border-radius: 126px 0 126px 0;
+  border-radius: 8vw 0 8vw 0;
 }
 
 .container-but{
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin: 2vw 0 2vw 0;
   /* justify-content: flex-end; */
   align-items: flex-end;
   padding-left: 8vw;
@@ -337,9 +338,6 @@ body {
 .Footer-Gabung .icon{
   justify-content: fl;
 }
-
-
-
 
 hr {
   margin: 1rem 0;
@@ -11085,6 +11083,11 @@ html {
 
 .upload-section {
   padding: 0;
+  margin: 0;
+}
+
+.description{
+    text-align: justify;
 }
 
 .page-section .page-section-heading {
@@ -11301,6 +11304,11 @@ html {
   background-color: #1a252f;
 }
 
+.main-form{
+    padding: 0;
+    margin: 0;
+}
+
 .footer {
   background-color: #eec85c; /* Warna kuning */
   color: black; /* Warna teks */
@@ -11309,7 +11317,6 @@ html {
   align-items: center;
   padding: 10px 20px;
   font-size: 20px;
-  height: 100%;
 }
 
 .footer-left {
@@ -11334,9 +11341,19 @@ html {
   color: #444; /* Efek hover */
 }
 
+@media screen and (max-width: 1200px){
+    .navbar{
+        justify-content: space-between;
+    }
+}
+
 @media screen and (max-width: 961px){
     .upload-icon{
         width: 40px;
+    }
+
+    .title img {
+        width: 70vw;
     }
 
     .desc{
@@ -11350,9 +11367,18 @@ html {
     .buton{
         font-size: 1.2rem;
     }
+
+    .main-container {
+        border-radius: 15vw 0 15vw 0;
+    }
+
+    .box {
+        border-radius: 15vw 0 15vw 0;
+    }
 }
 
 @media screen and (max-width: 633px){
+
     .footer-left{
         font-size: 15px;
     }
@@ -11361,3 +11387,39 @@ html {
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 485px){
+    .title img {
+        width: 85vw;
+    }
+
+    .footer-left{
+        font-size: 12px;
+    }
+
+    .footer-right a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .footer-left{
+        font-size: 9px;
+    }
+
+    .footer-right a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 345px){
+    .title-img {
+        width: 275px;
+    }
+
+    .titleEmail img{
+        width: 140px;
+    }
+}
+
+

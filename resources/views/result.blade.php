@@ -80,7 +80,8 @@
                                 Your browser does not support the audio element.
                             </audio>
                             <!-- Tombol Play/Pause -->
-                            <button class="play-button">▶  Play Song</button>
+                            <button class="play-button" id="play-long">▶  Play Song</button>
+                            <button class="play-button" id="play-short">▶</button>
                             <input type="range" id="progress-bar" value="0" min="0" max="100">
                             <span id="time-display">0:00</span>
                         </div>
@@ -90,6 +91,16 @@
                         <div class="recommendations">
                             <h2 class="recommend-title">Recommended For You:</h2>
                             <div class="recommend-box" id="recommend-list">
+                                <div class="recommend-item">
+                                    <img src="/images/img/Song-Icon.jpg" class='song-img'>
+                                    <div class="song-info">
+                                        <p class="song-title"><strong>Dummy Title</strong></p>
+                                        <p class="song-genre">Dummy Genre</p>
+                                    </div>
+                                </div>
+                                @if ($recommendations == [])
+                                    <p>No recommendations found.</p>
+                                @endif
                                 @foreach ($recommendations as $song)
                                     <div class="recommend-item" onclick="openYoutube('{{ $song['videoId'] }}')">
                                         <img src="/images/img/Song-Icon.jpg" class='song-img'>
@@ -110,15 +121,17 @@
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="footer-left">&copy; 2024 GenHive. All Rights Reserved.</div>
+        <div class="footer">
+            <div class="footer-left">
+                copyrights©2024 Reserved by GenHive
+            </div>
             <div class="footer-right">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
-        </footer>
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

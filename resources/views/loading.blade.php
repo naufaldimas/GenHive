@@ -58,12 +58,6 @@
                                 <span class="text">Find the Genre</span>
                                 <span class="dots"></span>
                             </div>
-
-                            <div class="progress-container">
-                                <div class="progress-bar" id="progress-bar"></div>
-                            </div>
-
-                            <div class="loading-percentage" id="loading-percentage">0%</div>
                         </div>
                     </div>
                 </div>

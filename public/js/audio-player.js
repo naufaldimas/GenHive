@@ -1,17 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
     const audio = document.getElementById("audioPlayer");
-    const playButton = document.querySelector(".play-button");
+    const playButtonLong = document.getElementById("play-long");
+    const playButtonShort = document.getElementById("play-short");
     const progressBar = document.getElementById("progress-bar");
     const timeDisplay = document.getElementById("time-display");
 
     // Fungsi untuk memutar atau menghentikan lagu
-    playButton.addEventListener("click", function () {
+    playButtonLong.addEventListener("click", function () {
         if (audio.paused) {
             audio.play();
-            playButton.textContent = "⏸ Pause";
+            playButtonLong.textContent = "⏸ Pause";
         } else {
             audio.pause();
-            playButton.textContent = "▶ Play Song";
+            playButtonLong.textContent = "▶ Play Song";
+        }
+    });
+
+    playButtonShort.addEventListener("click", function () {
+        if (audio.paused) {
+            audio.play();
+            playButtonShort.textContent = "⏸";
+        } else {
+            audio.pause();
+            playButtonShort.textContent = "▶";
         }
     });
 
@@ -40,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Reset tombol ketika lagu selesai
     audio.addEventListener("ended", function () {
-        playButton.textContent = "▶ Play Song";
+        playButtonLong.textContent = "▶ Play Song";
+        playButtonShort.textContent = "▶";
         progressBar.value = 0;
         progressBar.style.background = `linear-gradient(to right, #F4BC43 ${progress}%, rgb(255, 226, 119)  ${progress}%)`;
         timeDisplay.textContent = "0:00";

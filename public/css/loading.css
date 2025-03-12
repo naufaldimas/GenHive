@@ -17,7 +17,7 @@
 .container_loading {
     margin: 0;
     padding: 0;
-    width: 500px;
+    max-width: 500px;
     height: 300px;
     position: relative;
     display: flex;
@@ -89,25 +89,14 @@
     text-align: left; /* Menjaga titik-titik di sebelah kiri */
 }
 
-.progress-container {
-    width: 100%;
-    background-color: #F7D46C;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 10px;
-    height: 15px;
+@media screen and (max-width: 520px){
+    .loading-text{
+        font-size: 25px;
+    }
 }
 
-.progress-bar {
-    height: 100%;
-    width: 0;
-    transition: width 0.4s ease-in-out;
-}
-
-.loading-percentage {
-    margin-top: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #F4BC43;
-    text-align: center;
+@media screen and (max-width: 450px){
+    .loading-text{
+        font-size: 20px;
+    }
 }
