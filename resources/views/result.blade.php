@@ -91,13 +91,6 @@
                         <div class="recommendations">
                             <h2 class="recommend-title">Recommended For You:</h2>
                             <div class="recommend-box" id="recommend-list">
-                                <div class="recommend-item">
-                                    <img src="/images/img/Song-Icon.jpg" class='song-img'>
-                                    <div class="song-info">
-                                        <p class="song-title"><strong>Dummy Title</strong></p>
-                                        <p class="song-genre">Dummy Genre</p>
-                                    </div>
-                                </div>
                                 @if ($recommendations == [])
                                     <p>No recommendations found.</p>
                                 @endif

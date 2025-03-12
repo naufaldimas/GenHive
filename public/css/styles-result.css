@@ -90,7 +90,7 @@ body {
 }
 
 .recommend-title {
-    font-size: 20px;
+    font-size: 21px;
     font-family: "ErasBoldITC";
     margin-bottom: 15px;
 }
@@ -152,6 +152,7 @@ body {
 
 .song-genre {
     color: #555;
+    font-size: 13px;
     margin: 0;
     padding: 0;
 }
@@ -311,5 +312,19 @@ body {
 
     .play-button{
         width: 80px;
+    }
+
+    .recommend-title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .recommend-title{
+        font-size: 17px;
+    }
+
+    .recommend-box p{
+        font-size: 13px;
     }
 }

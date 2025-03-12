@@ -11394,9 +11394,13 @@ html {
     .footer-right a {
         font-size: 12px;
     }
+
+    .navbar-img{
+        width: 150px;
+    }
 }
 
-@media screen and (max-width: 345px){
+@media screen and (max-width: 370px){
     .title-img {
         width: 275px;
     }
@@ -11406,4 +11410,15 @@ html {
     }
 }
 
+@media screen and (max-width: 1000px){
+    .navbar > .container,
+    .navbar > .container-fluid,
+    .navbar > .container-sm,
+    .navbar > .container-md,
+    .navbar > .container-lg,
+    .navbar > .container-xl,
+    .navbar > .container-xxl {
+      padding: 0 45px;
+    }
+}
 
