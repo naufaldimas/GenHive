@@ -56,7 +56,7 @@
         </section>
 
         <section class="page-section upload-section bg-primary text-white mb-0" id="about">
-            <form action="{{ route('result') }}" method="POST" enctype="multipart/form-data">
+            <form class="main-form" action="{{ route('result') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="main-container">
                     <div class="title">
@@ -103,12 +103,6 @@
                                 <span class="text">Find the Genre</span>
                                 <span class="dots"></span>
                             </div>
-
-                            <div class="progress-container">
-                                <div class="progress-bar" id="progress-bar"></div>
-                            </div>
-
-                            <div class="loading-percentage" id="loading-percentage">0%</div>
                         </div>
                     </div>
                 </div>
@@ -147,7 +141,7 @@
                     <img class="title-img" src="/images/img/GenhiveYel.png">
                 </div>
                 <div class="container-text">
-                    <div>
+                    <div class="description">
                         GenHive adalah platform inovatif yang dirancang untuk membantu pengguna mengidentifikasi genre musik dengan cepat dan akurat. Dengan teknologi kecerdasan buatan, GenHive mampu menganalisis lagu dan mengklasifikasikannya ke dalam berbagai genre populer, termasuk KPop, JPop, Rock, R&B, Rap/Hip-Hop, Pop, EDM, serta Alternative/Indie.
                     </div>
                 </div>
