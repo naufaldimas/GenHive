@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="container-but">
-                    <button class="buton ErasDemiITC" >Another Song</button>
+                    <button class="buton ErasDemiITC" onclick="window.location.href='{{ route('home') }}'">Another Song</button>
                 </div>
             </div>
         </section>

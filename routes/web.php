@@ -5,7 +5,7 @@ use App\Http\Controllers\SongController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::post('/result', [SongController::class, 'predict'])->name('result');
 

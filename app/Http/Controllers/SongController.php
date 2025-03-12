@@ -34,7 +34,7 @@ class SongController extends Controller
                     'file', // This is the field name expected by the API
                     file_get_contents($file->getRealPath()),
                     $file->getClientOriginalName()
-                )->post('http://localhost:5555/predict');
+                )->post('http://127.0.0.1:5555/predict');
 
                 $data = $response->json();
 
