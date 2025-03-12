@@ -60,13 +60,13 @@
 
                         <div class="result-detail">
                             <div class="detailing-list genre-detail">
-                                <p class="title-sec"><strong>Song</strong></p>
+                                <p class="title-sec ErasBoldITC"><strong>Song</strong></p>
                                 <span class="colon">:</span>
                                 <span>{{ $song_name }}</span>
                             </div>
 
                             <div class="detailing-list genre-detail">
-                                <p class="title-sec"><strong>Genre</strong></p>
+                                <p class="title-sec ErasBoldITC"><strong>Genre</strong></p>
                                 <span class="colon">:</span>
                                 <span class="find-genre">{{ $predicted_genre }}</span>
                             </div>

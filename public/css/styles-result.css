@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'ErasDemiITC';
+    src:url('/font/ITC Eras Demi Regular.otf');
+}
+
+@font-face {
+    font-family: 'ErasBoldITC';
+    src:url('/font/ITC Eras Std Bold.otf');
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('/font/Inter-Regular.otf');
+}
+
 .result-page{
     height: 100%;
 }
@@ -48,7 +63,7 @@ body {
 .title-sec{
     padding: 0;
     margin: 0;
-    min-width: 70px; /* Gunakan min-width agar lebih stabil dibanding 5vw */
+    min-width: 80px; /* Gunakan min-width agar lebih stabil dibanding 5vw */
     text-align: left;
 }
 
@@ -76,7 +91,7 @@ body {
 
 .recommend-title {
     font-size: 20px;
-    font-family: "Cambria", serif;
+    font-family: "ErasBoldITC";
     margin-bottom: 15px;
 }
 
@@ -157,7 +172,7 @@ body {
     width: 150px;
     background: #F4BC43;
     color: white;
-    font-family: 'Cambria_Bold' !important;
+    font-family: "ErasDemiITC" !important;
     border: none;
     border-radius: 100px;
     font-size: 1.2rem;

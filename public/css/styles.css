@@ -105,6 +105,16 @@
     src: url('/font/Cambria W02 Regular.otf');
 }
 
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('/font/Montserrat-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('/font/Inter-Regular.otf');
+}
+
 .ErasBoldITC{
     font-family: 'ErasBoldITC';
 }
@@ -114,7 +124,7 @@
 }
 
 .desc{
-    font-family: 'Cambria';
+    font-family: "Inter-Regular";
     color: #444341;
     line-height: 15px;
     font-size: 1.3rem;
@@ -134,7 +144,7 @@
 
 body {
   margin: 0;
-  font-family: 'Cambria';
+  font-family: 'Inter-Regular';
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -276,7 +286,7 @@ body {
   padding: 3px 22.5px;
   text-align: center;
   background-color: #f4bc43;
-  font-family: 'Cambria_Bold';
+  font-family: 'ErasDemiITC';
   color: #ffffff;
   border: none; /* Hapus border */
   border-radius: 25px; /* Sudut melengkung */
@@ -882,33 +892,6 @@ progress {
   width: 200px;
 }
 
-@media (min-width: 576px) {
-  .container-sm, .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container-md, .container-sm, .container {
-    max-width: 720px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-
-  .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
-  }
-}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -4008,6 +3991,7 @@ textarea.form-control-lg {
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
+  padding: 0 70px;
 }
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
@@ -11199,8 +11183,8 @@ html {
     background: #f7d46c;
   }
   #mainNav.navbar-shrink {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1.1vw;
+    padding-bottom: 1.1vw;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.5em;
